@@ -2,6 +2,12 @@
 \RequirePackage[l2tabu,orthodox]{nag} % Раскомментировав, можно в логе получать рекомендации относительно правильного использования пакетов и предупреждения об устаревших и нерекомендуемых пакетах
 % Формат А4, 14pt (ГОСТ Р 7.0.11-2011, 5.3.6)
 \documentclass[a4paper,14pt,oneside,openany]{memoir}
+\DeclareUnicodeCharacter{2061}{} % для ликвидации ошибки U+2061 Unicode character ⁡ (U+2061) (inputenc) not set up for use with LaTeX
+\DeclareUnicodeCharacter{2211}{}
+\DeclareUnicodeCharacter{0302}{}
+\DeclareUnicodeCharacter{03B1}{}
+\DeclareUnicodeCharacter{03B2}{}
+
 
 \input{common/setup}            % общие настройки шаблона
 \input{common/packages}         % Пакеты общие для диссертации и автореферата
@@ -41,7 +47,7 @@
 %%% Управление компиляцией отдельных частей диссертации %%%
 % Необходимо сначала иметь полностью скомпилированный документ, чтобы все
 % промежуточные файлы были в наличии
-% Затем, для вывода отдельных частей можно воспользоваться командой \includeonly
+% Затем\part{title}, для вывода отдельных частей можно воспользоваться командой \includeonly
 % Ниже примеры использования команды:
 %
 %\includeonly{Dissertation/part2}
