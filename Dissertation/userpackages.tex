@@ -30,6 +30,11 @@
 \usepackage{ltablex}  % расширение longtable с tabularx
 \keepXColumns  % чтобы работало правильно с tabularx внутри longtable
 
+\usepackage{threeparttablex}  % добавляет окружение ThreePartTable
+\usepackage{ltablex}          % позволяет использовать X-столбцы с переносом на следующую страницу
+\keepXColumns                 % сохраняет поведение X как в tabularx
+
+
 %%% Микротипографика
 %\ifnumequal{\value{draft}}{0}{% Только если у нас режим чистовика
 %    \usepackage[final, babel, shrink=45]{microtype}[2016/05/14] % улучшает представление букв и слов в строках, может помочь при наличии отдельно висящих слов
